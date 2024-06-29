@@ -1,0 +1,21 @@
+import pandas as pd
+
+
+data = {
+    'ID': range(1, 101),
+    'Nome': [f'Filme {i}' for i in range(1, 101)],
+    'Nota': [round(i % 5 + 1, 1) for i in range(1, 101)]
+}
+
+df = pd.DataFrame(data)
+
+primeiros_12 = df.head(12)
+print("Primeiros 12 registros:")
+print(primeiros_12)
+
+ultimos_6 = df.tail(6)
+print("\nÚltimos 6 registros:")
+print(ultimos_6)
+
+tamanho_dados = len(df)
+print(f"\nTamanho da massa de dados: {tamanho_dados}")
